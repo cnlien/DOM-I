@@ -102,3 +102,8 @@ newNavItemTwo.innerHTML = 'Item Two';
 
 document.querySelector('nav').appendChild(newNavItem);
 document.querySelector('nav').prepend(newNavItemTwo);
+
+contentHeaders.forEach((element) => {
+  element.style.fontSize = '2rem';
+  element.style.textAlign = 'center';
+});
