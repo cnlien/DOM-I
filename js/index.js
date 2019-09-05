@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM</br>Is</br> Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 <br> Street Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -87,4 +87,18 @@ contactSection[2].innerHTML = siteContent['contact']['email'];
 
 // Footer Section
 let footerContent = document.querySelectorAll('footer p');
-footerContent[0].innerHTML = siteContent['footer']['copyright']
+footerContent[0].innerHTML = siteContent['footer']['copyright'];
+
+// Task 3:
+navItems.forEach((element) => {
+  element.style.color = "green";
+});
+
+let newNavItem = document.createElement('a');
+let newNavItemTwo = document.createElement('a');
+
+newNavItem.innerHTML = 'Item One';
+newNavItemTwo.innerHTML = 'Item Two';
+
+document.querySelector('nav').appendChild(newNavItem);
+document.querySelector('nav').prepend(newNavItemTwo);
